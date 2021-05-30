@@ -11,7 +11,9 @@ int main()
     pixelData** pix = new pixelData * [header.width];
     for (int i = 0; i < header.width; i++)
         pix[i] = new pixelData[header.depth];
-
+    for (int i = 0; i < header.width; i++)
+        for (int j = 0; j < header.depth; j++)
+            input.read((char*)&pix[i][j], sizeof(pixelData));
 
 
     int n;
