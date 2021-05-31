@@ -30,3 +30,13 @@ struct pixelData
     int8_t greenComponent;
     int8_t blueComponent;
 };
+
+class picture
+{
+    bmpHead header;
+    pixelData** pix;
+public:
+    void readBmp(string);
+    void writeBmp(string, int);
+    void enlargeBmp(int);
+};
